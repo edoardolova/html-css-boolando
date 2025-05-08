@@ -9,7 +9,6 @@
     --boolando-bg-discount-tag: #FF0101;
     --boolando-bg-sustainability-tag: #008000;
     --boolando-bg-footer: #1A1A1A;
-    --boolando-price-text:#FF9195;  
 }
 
 body{
@@ -21,6 +20,10 @@ body{
 /* #region utils */
 .text-white{
     color: white;
+}
+
+.text-price-color{
+    color: var(--boolando-bg-discount-tag);
 }
 
 .d-flex{
@@ -40,11 +43,14 @@ body{
 }
 
 
+
+
+
+
 /* #endregion utils */
 
 
 /* #region general */
-/* backgrounds  */
 
 .container{
     width: 80%;
@@ -54,15 +60,54 @@ body{
 ul{
     list-style: none;
 }
+
 a{
     text-decoration: none;
     color: white;
 }
 
+.row{
+    flex-wrap: wrap;
+    margin: 0 -0.5rem;
+}
+
+.col-4{
+    width: calc(100% / 12 * 4);
+    padding: 0 0.5rem;
+}
+
+.text-bold{
+    font-weight: 700;
+}
+
+.text-line-through{
+    text-decoration: line-through;
+}
+
+
+
+/* tag tag-discount */
+.tag{
+    padding: 5px 10px;
+    display: inline-block;
+    color: white;
+}
+
+.tag-discount{
+    background-color: var(--boolando-bg-discount-tag);
+}
+
+.tag-sustainability{
+    background-color: var(--boolando-bg-sustainability-tag);
+}
+
+
+
+
 /* #endregion general */
 
 
-/* #region header */
+
 header{
     background-color: var(--boolando-bg-header);
     padding: 1rem 0;
@@ -86,7 +131,50 @@ header{
 
     }
 }
-/* #endregion header */
+
+
+main{
+    padding: 5rem 0;
+    .card{
+        position: relative;
+        .img-default{
+            display: block;
+
+        }
+        .img-hover{
+            display: none;
+        }
+        .tag-container{
+            position: absolute;
+            bottom: 15%;
+            left: 2%;
+        }
+        .like-container{
+            position: absolute;
+            padding: 15px;
+            background-color: white;
+            top: 3%;
+            right: 1%;
+            i{
+                font-size: 1.5rem;
+            }
+        }
+        img{
+            max-width: 100%;
+        }
+    }
+
+    .card:hover{
+        cursor: pointer;
+        .img-default{
+            display: none;
+        }
+
+        .img-hover{
+            display: block;
+        }
+    }
+}
 
 
 
