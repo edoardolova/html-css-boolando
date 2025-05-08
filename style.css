@@ -3,3 +3,91 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --boolando-bg-header: #FF6900;
+    --boolando-bg-discount-tag: #FF0101;
+    --boolando-bg-sustainability-tag: #008000;
+    --boolando-bg-footer: #1A1A1A;
+    --boolando-price-text:#FF9195;  
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* #region utils */
+.text-white{
+    color: white;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.text-end{
+    text-align: end;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.mr-1{
+    margin-right: 1rem;
+}
+
+
+/* #endregion utils */
+
+
+/* #region general */
+/* backgrounds  */
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* #endregion general */
+
+
+/* #region header */
+header{
+    background-color: var(--boolando-bg-header);
+    padding: 1rem 0;
+    .nav{
+        align-items: center; 
+
+        div:nth-child(odd){
+            width: 25%;
+        }
+
+        div:nth-child(even){
+            width: 50%;
+        }
+
+    }
+
+    .logo{
+        max-width: 7rem;
+        display: inline-block;
+        vertical-align: middle;
+
+    }
+}
+/* #endregion header */
+
+
+
+
